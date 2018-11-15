@@ -1,0 +1,8 @@
+#generate a random name from a list
+
+import random
+
+def generate_pet_name(a_list):
+    return random.choice(a_list)
+
+print(generate_pet_name(['Fluff', 'Puff', 'Kurr', 'Murr', 'Buff', 'Tuff']))
