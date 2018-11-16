@@ -1,12 +1,17 @@
-#Large, even or odd number
+#Even or odd number
+
+def even(nr):
+
+    return nr % 2 == 0
+
+
 
 def even_odd_or_large(x):
-    if x >= 100:
-        return str(x) + " is large."
-    elif x % 2 == 0:
-        return str(x) + " is a small, even number."
+
+    if even(x):
+        return str(x) + " is an even number."
     else:
-        return str(x) + " is a small, odd number."
+        return str(x) + " is an odd number."
 
 
-print(even_odd_or_large(7))
+print(even_odd_or_large(10))
