@@ -1,0 +1,22 @@
+#Recoqnize user name from list + greeting
+
+names = []      #Create a list where to store all input names
+
+def greeting(string):
+    
+    string = string.title()      #Change string to first character in capital
+    if string not in names:
+        names.append(string)
+        return "Hello {}!".format(string)
+    elif string in names:
+        return "Welcome back {}!".format(string)
+              
+
+
+def main():
+    name_input = input(str("\nWhat's your name?: "))
+    print(greeting(name_input))
+
+while True:
+    if __name__=="__main__":
+        main()
