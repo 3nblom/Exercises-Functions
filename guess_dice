@@ -4,8 +4,10 @@ import time
 def guess_dice(guess):
 
     dice = random.randint(1,6)
-    dice_answer = ("Dice is: "+ str(dice))
-    if guess != dice:
+    dice_answer = ("\nDice is: "+ str(dice))
+    if guess > 6:
+        return "\nA dice only have 6 values"
+    elif guess != dice:
         return dice_answer + "\nYou lose!"
     else:
         return dice_answer + "\nYou win!"
