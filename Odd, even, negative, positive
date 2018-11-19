@@ -1,0 +1,26 @@
+#Return odd or even and negative or positive
+
+def odd(a):
+
+    return a % 2 != 0
+
+def get_integer_category(x):
+
+    if x > 0:
+        if odd(x):
+            return "Positive, odd integer"
+        else:
+            return "Positive, even integer"
+        
+    if x < 0:
+        if odd(x):
+            return "Negative, odd integer"
+        
+        else:
+            return "Negative, even integer"
+        
+    if x == 0:
+        return "Zero"
+
+
+print(get_integer_category(-1))
