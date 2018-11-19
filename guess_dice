@@ -4,18 +4,20 @@ import time
 def guess_dice(guess):
 
     dice = random.randint(1,6)
-    dice_answer = ("\nDice is: "+ str(dice))
-    if guess > 6:
-        return "\nA dice only have 6 values"
+    dice_answer = ("\nDie shows: "+ str(dice))
+    if guess > 6 or guess < 1:
+        return "\nA die only have 6 values"
     elif guess != dice:
+        print("Throwing die..")
+        time.sleep(1)
         return dice_answer + "\nYou lose!"
     else:
+        print("Throwing die..")
+        time.sleep(1)
         return dice_answer + "\nYou win!"
 
 def main():
     user_guess = int(input("\nYour guess: "))
-    print("Throwing dice..")
-    time.sleep(1)
     print(guess_dice(user_guess))
   
 while True:
