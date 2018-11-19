@@ -1,0 +1,26 @@
+"""
+Takes in two arguments and returns all even number
+between those two arguments. Uses a function which returns True or False
+if the number is even or not.
+"""
+def even(x):
+    
+    return x % 2 == 0
+
+
+def list_even(arg1,arg2):
+
+    a_list = []
+
+    if arg1 < arg2:
+        for i in range(arg1,arg2):
+            if even(i):
+                a_list.append(i)
+                
+    elif arg2 < arg1:
+        for i in range(arg2,arg1):
+            if even(i):
+                a_list.append(i)
+    return a_list
+
+print(list_even(10,1))
