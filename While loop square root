@@ -1,0 +1,13 @@
+#While loop - return all square root numbers from 1-10 in a list
+
+def square_while():
+
+    answer = []
+    sq = 1
+    while r < 11:
+        answer.append(sq * sq)
+        sq += 1
+    return answer
+
+
+print(square_while())
