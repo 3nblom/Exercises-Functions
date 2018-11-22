@@ -1,0 +1,33 @@
+"""
+Celsius to Farenheit and Farenheit to Celsius converter
+"""
+
+
+#function which convert celsius (argument) to and return farenheit
+def cel_to_far(celsius):
+
+    farenheit = (celsius * 9/5) + 32
+    return farenheit
+
+#function which convert farenheit (argument) to and return celsius
+def far_to_cel(farenheit):
+
+    celsius = (farenheit - 32) * 5/9
+    return celsius
+
+#function which takes two arguments. 1. what degree, 2.what to convert to
+def main(temperature,convert):
+
+    if convert == "F":
+        return round(cel_to_far(temperature))
+    elif convert == "C":
+        return round(far_to_cel(temperature))
+
+
+while True:
+    temp = int(input("Enter degree to convert: "))
+    print("\"C\" for Farenheit > Celsius")
+    print("\"F\" for Celsius > Farenheit")
+    conv = str(input("Enter unit to convert to: "))
+    print(main(temp,conv),conv)
+    print("")
